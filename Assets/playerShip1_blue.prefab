@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8129702746022633359}
   - component: {fileID: -5882789380094091991}
   - component: {fileID: -8568568740214953982}
+  - component: {fileID: 6507193773545880142}
   m_Layer: 0
   m_Name: playerShip1_blue
   m_TagString: Untagged
@@ -106,6 +107,10 @@ MonoBehaviour:
   laserBlue04Prefab: {fileID: 4608082828427048392, guid: eb9ea7ab8c72efd4198fbfd3ea457587, type: 3}
   blueLaserPrefab: {fileID: 2224824696668195493, guid: 57542ac9860127647a8f17c15b838ab5, type: 3}
   laserShotAudioSource: {fileID: 1752770974142165724, guid: 9f86d618522ea464b96bc2ed4a95f195, type: 3}
+  laserShotAudioSource1: {fileID: 0}
+  laserShotAudioSource2: {fileID: 0}
+  laserShotAudioSource3: {fileID: 0}
+  laserShotAudioSource4: {fileID: 0}
   randomAttackCooldownImage: {fileID: 0}
   blueLaserCooldownImage: {fileID: 0}
   cooldownImage: {fileID: 0}
@@ -268,3 +273,17 @@ MonoBehaviour:
   delayBeforeReturnToMenu: 1
   explosionAudioSource: {fileID: 0}
   fadeDuration: 1
+--- !u!114 &6507193773545880142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8129702746022633355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cae2c65e5696843aab16859b91e5bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  godModeIndicator: {fileID: 0}
+  playerHitbox: {fileID: 0}
