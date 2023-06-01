@@ -9,6 +9,14 @@ public class PlayerController : MonoBehaviour
     public GameObject laserBlue04Prefab;  // Link this to your laserPrefab in the inspector
     public GameObject blueLaserPrefab;  // Link this to your laserBlue01 prefab in the inspector
 
+
+    public AudioSource laserShotAudioSource;  // AudioSource for the laser shot sound effect
+    public AudioSource laserShotAudioSource1;  // AudioSource for the laser shot sound effect1
+    public AudioSource laserShotAudioSource2;  // AudioSource for the laser shot sound effect2
+    public AudioSource laserShotAudioSource3;  // AudioSource for the laser shot sound effect3
+    public AudioSource laserShotAudioSource4;  // AudioSource for the laser shot sound effect4
+    
+
     private float shootingDelay = 0.25f;
     private float maxY;
     private float minY;
@@ -44,6 +52,11 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetButton("Fire1") || Input.GetButton("Jump")) && Time.time > timeSinceLastShot + shootingDelay)
         {
             Instantiate(laserPrefab, transform.position, Quaternion.Euler(0, 0, 0));
+            // Play the laser shot sound effect
+            if (laserShotAudioSource != null)
+            {
+                laserShotAudioSource.Play();
+            }
             timeSinceLastShot = Time.time;
         }
 
@@ -53,6 +66,10 @@ public class PlayerController : MonoBehaviour
             Instantiate(laserPrefab, transform.position + new Vector3(-0.5f, -0.5f, 0), Quaternion.Euler(0, 0, 0));
             Instantiate(laserPrefab, transform.position, Quaternion.Euler(0, 0, 0));
             Instantiate(laserPrefab, transform.position + new Vector3(-0.5f, 0.5f, 0), Quaternion.Euler(0, 0, 0));
+            if (laserShotAudioSource1 != null)
+            {
+                laserShotAudioSource1.Play();
+            }
             timeSinceLastSpecialAttack = Time.time;
         }
 
@@ -78,6 +95,10 @@ public class PlayerController : MonoBehaviour
             Instantiate(zigZagLaserPrefab, transform.position + new Vector3(-3.5f, 3.5f, 0), Quaternion.Euler(0, 0, 45));
             Instantiate(zigZagLaserPrefab, transform.position + new Vector3(-4.0f, 4.0f, 0), Quaternion.Euler(0, 0, 45));
             Instantiate(zigZagLaserPrefab, transform.position + new Vector3(-4.5f, 4.5f, 0), Quaternion.Euler(0, 0, 45));
+            if (laserShotAudioSource2 != null)
+            {
+                laserShotAudioSource2.Play();
+            }
             timeSinceLastZigZagAttack = Time.time;
         }
 
@@ -103,7 +124,10 @@ public class PlayerController : MonoBehaviour
                 GameObject bottomLaser = Instantiate(blueLaserPrefab, bottomPos, Quaternion.identity);
                 bottomLaser.GetComponent<BlueLaserController>().Speedx = speed;  // Making it go upwards
             }
-
+            if (laserShotAudioSource3 != null)
+            {
+                laserShotAudioSource3.Play();
+            }
             timeSinceLastBlueLaserAttack = Time.time;
         }
 
@@ -116,6 +140,10 @@ public class PlayerController : MonoBehaviour
                 laser.GetComponent<RandomAttackLaserController>().SetDirection(randomAngle);
             }
 
+            if (laserShotAudioSource4 != null)
+            {
+                laserShotAudioSource4.Play();
+            }
             timeSinceLastRandomAttack = Time.time;
         }
 
