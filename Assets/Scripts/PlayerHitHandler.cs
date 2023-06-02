@@ -21,7 +21,7 @@ public class PlayerHitHandler : MonoBehaviour
         if (!isHit && collision.CompareTag("EnemyLaser"))
         {
             isHit = true;
-            // Play the explosion sound
+            GetComponent<Renderer>().enabled = false; // Make character invisible
             explosionAudioSource.PlayOneShot(explosionAudioSource.clip);
             hitTime = Time.time;
             Destroy(collision.gameObject);
