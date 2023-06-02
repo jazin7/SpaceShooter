@@ -149,6 +149,5 @@ MonoBehaviour:
   startingHealth: 3
   laserPrefab: {fileID: 4475065616850245194, guid: ea2140ecd7c3ea945a5bdf167b2078b2, type: 3}
   shootingInterval: 1
-  speed: 2
+  speed: 2.5
   hitSoundClip: {fileID: 8300000, guid: 2ce2163a261213a489e26b52b5f08a44, type: 3}
-  dieSoundClip: {fileID: 8300000, guid: 462b1ee829a06454598ef518495a250e, type: 3}

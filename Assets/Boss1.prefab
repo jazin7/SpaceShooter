@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6710174818456181221
+--- !u!1 &315399342917940065
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6710174818456181214}
-  - component: {fileID: 6710174818456181217}
-  - component: {fileID: 6710174818456181216}
-  - component: {fileID: 6710174818456181219}
-  - component: {fileID: 6710174818456181218}
+  - component: {fileID: 2807949397581781954}
+  - component: {fileID: 1653630063493561996}
+  - component: {fileID: -4710948784831565997}
+  - component: {fileID: 7401879119873607195}
+  - component: {fileID: -2528842976020287200}
   m_Layer: 0
-  m_Name: enemyBlack1
+  m_Name: Boss1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6710174818456181214
+--- !u!4 &2807949397581781954
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6710174818456181221}
+  m_GameObject: {fileID: 315399342917940065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.798, y: -3.446, z: -3.2325208}
+  m_LocalPosition: {x: -3.492, y: -2.322, z: -8.6151285}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6710174818456181217
+--- !u!212 &1653630063493561996
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6710174818456181221}
+  m_GameObject: {fileID: 315399342917940065}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,25 +76,25 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5a8cc881a358f05438472b6c1ff8507f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2715941b06cad3e4395d9a38d601dbaf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.84, y: 0.93}
+  m_Size: {x: 1.46, y: 0.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &6710174818456181216
+--- !u!50 &-4710948784831565997
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6710174818456181221}
+  m_GameObject: {fileID: 315399342917940065}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -108,13 +108,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &6710174818456181219
+--- !u!61 &7401879119873607195
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6710174818456181221}
+  m_GameObject: {fileID: 315399342917940065}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -125,29 +125,29 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.84, y: 0.93}
-    newSize: {x: 0.84, y: 0.93}
+    oldSize: {x: 1.46, y: 0.8}
+    newSize: {x: 1.46, y: 0.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.84, y: 0.93}
+  m_Size: {x: 1.46, y: 0.8}
   m_EdgeRadius: 0
---- !u!114 &6710174818456181218
+--- !u!114 &-2528842976020287200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6710174818456181221}
+  m_GameObject: {fileID: 315399342917940065}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7af797b3e3f82642b1fb78d75c4293a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 1
-  laserPrefab: {fileID: 4475065616850245194, guid: ea2140ecd7c3ea945a5bdf167b2078b2, type: 3}
+  startingHealth: 25
+  laserPrefab: {fileID: 4475065616850245194, guid: c224eb519d09dd340b56c15fe55c0698, type: 3}
   shootingInterval: 2
-  speed: 1.5
+  speed: 3
   hitSoundClip: {fileID: 8300000, guid: 2ce2163a261213a489e26b52b5f08a44, type: 3}
