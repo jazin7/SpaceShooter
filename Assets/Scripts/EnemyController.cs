@@ -16,6 +16,7 @@ public class EnemyController : MonoBehaviour
     private bool movingUp = true;
     private float enemyHeight;
 
+
     private void Start()
     {
         laserShotAudioSourceEnemy = gameObject.AddComponent<AudioSource>();
@@ -73,6 +74,7 @@ public class EnemyController : MonoBehaviour
     private void TakeDamage(int amount)
     {
         currentHealth -= amount;
+
 
         if (currentHealth <= 0)
         {

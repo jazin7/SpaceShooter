@@ -151,4 +151,4 @@ MonoBehaviour:
   shootingInterval: 0.5
   speed: 2
   hitSoundClip: {fileID: 8300000, guid: 2ce2163a261213a489e26b52b5f08a44, type: 3}
-  dieSoundClip: {fileID: 8300000, guid: 462b1ee829a06454598ef518495a250e, type: 3}
+  floatingTextPrefab: {fileID: 8414250805971857360, guid: 546108b91a8b4db4bb31656349e7f793, type: 3}
