@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Current Highscore:'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -612,6 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba92a7ef657ca9c47874ba8ed1465e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highScoreText: {fileID: 175100703}
 --- !u!114 &1664994573
 MonoBehaviour:
   m_ObjectHideFlags: 0

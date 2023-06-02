@@ -58,6 +58,13 @@ public class EnemySpawner : MonoBehaviour
             displayStage++;
             stageCounterText.text = "Stage: " + displayStage;
 
+            int highScore = PlayerPrefs.GetInt("HighScore", 0);
+            if (displayStage > highScore)
+            {
+                PlayerPrefs.SetInt("HighScore", displayStage);
+                PlayerPrefs.Save();
+            }
+
             var enemies = new List<GameObject>();
             Vector2 spawnPosition = new Vector2(4, 0);  // Adjust this value as needed
             Vector2 spawnOffset = new Vector2(1.5f, -1.5f);  // Adjust this value as needed
