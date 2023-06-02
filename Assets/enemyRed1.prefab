@@ -150,4 +150,5 @@ MonoBehaviour:
   laserPrefab: {fileID: 4475065616850245194, guid: ea2140ecd7c3ea945a5bdf167b2078b2, type: 3}
   shootingInterval: 0.5
   speed: 2
-  laserShotAudioSourceEnemy: {fileID: 1777194011278370355, guid: 5d65ef59710115d4fa06afb2aab999a3, type: 3}
+  hitSoundClip: {fileID: 8300000, guid: 2ce2163a261213a489e26b52b5f08a44, type: 3}
+  dieSoundClip: {fileID: 8300000, guid: 462b1ee829a06454598ef518495a250e, type: 3}

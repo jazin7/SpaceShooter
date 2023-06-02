@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour
     public GameObject laserPrefab;
     public float shootingInterval = 3f;
     public float speed = 2f;
-
+    public AudioClip hitSoundClip;
     private AudioSource laserShotAudioSourceEnemy;  // AudioSource for the laser shot sound effect
 
     private int currentHealth;
@@ -76,7 +76,12 @@ public class EnemyController : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            PlayDieSound();
             Die();
+        }
+        else
+        {
+            PlayHitSound();
         }
     }
 
@@ -84,5 +89,25 @@ public class EnemyController : MonoBehaviour
     {
         //Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    private void PlayHitSound()
+    {
+        if (hitSoundClip != null && laserShotAudioSourceEnemy != null)
+        {
+            laserShotAudioSourceEnemy.PlayOneShot(hitSoundClip);
+        }
+    }
+
+    private void PlayDieSound()
+    {
+        // Create a separate GameObject for audio playback
+        GameObject audioObject = new GameObject("EnemyAudioObject");
+        AudioSource audioSource = audioObject.AddComponent<AudioSource>();
+        audioSource.clip = Resources.Load<AudioClip>("Audio/SFXExplo1");  // Assuming the audio clip is at "Resources/Audio/SFXExplo1"
+        audioSource.Play();
+
+        // Destroy the audio object after the sound has finished playing
+        Destroy(audioObject, audioSource.clip.length);
     }
 }
