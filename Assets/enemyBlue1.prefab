@@ -151,4 +151,4 @@ MonoBehaviour:
   shootingInterval: 1.5
   speed: 2
   hitSoundClip: {fileID: 8300000, guid: 2ce2163a261213a489e26b52b5f08a44, type: 3}
-  dieSoundClip: {fileID: 8300000, guid: 462b1ee829a06454598ef518495a250e, type: 3}
+  explosionParticlePrefab: {fileID: 525741806835223852, guid: bcfda279ac5ecef4b99045b62eef99e9, type: 3}

@@ -11,6 +11,10 @@ public class PlayerHitHandler : MonoBehaviour
     private float hitTime;
     public float fadeDuration = 1.0f;  // Duration of the fade-out in seconds
 
+
+    public GameObject explosionParticlePrefab; // Drag your explosion particle prefab here in the inspector
+
+
     private void Start()
     {
         bgmAudioSource = GetComponent<AudioSource>();
@@ -25,6 +29,9 @@ public class PlayerHitHandler : MonoBehaviour
             explosionAudioSource.PlayOneShot(explosionAudioSource.clip);
             hitTime = Time.time;
             Destroy(collision.gameObject);
+            // Instantiate explosion particle system at player's position
+            Instantiate(explosionParticlePrefab, transform.position, Quaternion.identity);
+
             // Start the fade-out for background music
             StartCoroutine(FadeOut(bgmAudioSource, fadeDuration));
         }

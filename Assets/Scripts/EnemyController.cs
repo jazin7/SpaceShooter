@@ -16,6 +16,7 @@ public class EnemyController : MonoBehaviour
     private bool movingUp = true;
     private float enemyHeight;
 
+    public GameObject explosionParticlePrefab; // Drag your explosion particle prefab here in the inspector
 
     private void Start()
     {
@@ -80,6 +81,8 @@ public class EnemyController : MonoBehaviour
         {
             PlayDieSound();
             Die();
+            Instantiate(explosionParticlePrefab, transform.position, Quaternion.identity);
+
         }
         else
         {
@@ -91,6 +94,7 @@ public class EnemyController : MonoBehaviour
     {
         //Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
+
     }
 
     private void PlayHitSound()
