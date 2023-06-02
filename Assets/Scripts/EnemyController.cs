@@ -17,7 +17,7 @@ public class EnemyController : MonoBehaviour
     private float enemyHeight;
 
     public GameObject explosionParticlePrefab; // Drag your explosion particle prefab here in the inspector
-
+    public GameObject damageImagePrefab;
     private void Start()
     {
         laserShotAudioSourceEnemy = gameObject.AddComponent<AudioSource>();
@@ -75,6 +75,7 @@ public class EnemyController : MonoBehaviour
     private void TakeDamage(int amount)
     {
         currentHealth -= amount;
+        GameObject damageImage = Instantiate(damageImagePrefab, transform.position, Quaternion.identity);
 
 
         if (currentHealth <= 0)

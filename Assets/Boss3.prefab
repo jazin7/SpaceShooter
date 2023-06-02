@@ -152,3 +152,4 @@ MonoBehaviour:
   speed: 5
   hitSoundClip: {fileID: 8300000, guid: 2ce2163a261213a489e26b52b5f08a44, type: 3}
   explosionParticlePrefab: {fileID: 525741806835223852, guid: bcfda279ac5ecef4b99045b62eef99e9, type: 3}
+  damageImagePrefab: {fileID: 449707427296971871, guid: 280c2692d27d3de478586e995f3ff22e, type: 3}

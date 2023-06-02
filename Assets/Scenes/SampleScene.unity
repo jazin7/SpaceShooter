@@ -142,6 +142,10 @@ PrefabInstance:
       propertyPath: delayBeforeReturnToMenu
       value: 1.25
       objectReference: {fileID: 0}
+    - target: {fileID: -8568568740214953982, guid: 8455c1ed44b15b24f81cebafb0a36a07, type: 3}
+      propertyPath: explosionParticlePrefab
+      value: 
+      objectReference: {fileID: 525741806835223852, guid: bcfda279ac5ecef4b99045b62eef99e9, type: 3}
     - target: {fileID: -5882789380094091991, guid: 8455c1ed44b15b24f81cebafb0a36a07, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1172,7 +1176,7 @@ GameObject:
   - component: {fileID: 895713884}
   - component: {fileID: 895713883}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: StarField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
