@@ -66,8 +66,8 @@ public class EnemySpawner : MonoBehaviour
             }
 
             var enemies = new List<GameObject>();
-            Vector2 spawnPosition = new Vector2(4, 0);  // Adjust this value as needed
-            Vector2 spawnOffset = new Vector2(1.5f, -1.5f);  // Adjust this value as needed
+            Vector2 spawnPosition = new Vector2(4, 0); 
+            Vector2 spawnOffset = new Vector2(1.5f, -1.5f); 
             for (int i = 0; i < stages[currentStage].enemies.Length; i++)
             {
                 var enemyPrefab = stages[currentStage].enemies[i];
@@ -75,13 +75,11 @@ public class EnemySpawner : MonoBehaviour
                 enemies.Add(Instantiate(enemyPrefab, enemySpawnPosition, Quaternion.identity));
             }
 
-            // Wait until all enemies from this stage are destroyed
             while (enemies.Exists(e => e != null))
             {
                 yield return null;
             }
 
-            // Wait for 3 seconds
             yield return new WaitForSeconds(3f);
 
             currentStage = (currentStage + 1) % stages.Count;

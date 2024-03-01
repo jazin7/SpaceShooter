@@ -1,20 +1,20 @@
 using UnityEngine;
-using UnityEngine.UI;  // This is required for UI components
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     private float speed = 8.0f;
     public GameObject laserPrefab;
-    public GameObject zigZagLaserPrefab;  // Link this to your laserGreen12 prefab in the inspector
-    public GameObject laserBlue04Prefab;  // Link this to your laserPrefab in the inspector
-    public GameObject blueLaserPrefab;  // Link this to your laserBlue01 prefab in the inspector
+    public GameObject zigZagLaserPrefab; 
+    public GameObject laserBlue04Prefab;  
+    public GameObject blueLaserPrefab;  
 
 
-    public AudioSource laserShotAudioSource;  // AudioSource for the laser shot sound effect
-    public AudioSource laserShotAudioSource1;  // AudioSource for the laser shot sound effect1
-    public AudioSource laserShotAudioSource2;  // AudioSource for the laser shot sound effect2
-    public AudioSource laserShotAudioSource3;  // AudioSource for the laser shot sound effect3
-    public AudioSource laserShotAudioSource4;  // AudioSource for the laser shot sound effect4
+    public AudioSource laserShotAudioSource;  
+    public AudioSource laserShotAudioSource1;  
+    public AudioSource laserShotAudioSource2;  
+    public AudioSource laserShotAudioSource3;  
+    public AudioSource laserShotAudioSource4;  
     
 
     private float shootingDelay = 0.25f;
@@ -32,10 +32,10 @@ public class PlayerController : MonoBehaviour
     private float timeSinceLastSpecialAttack = -5f;
     private float timeSinceLastRandomAttack = -3f;  // Time since last random attack
 
-    public Image randomAttackCooldownImage;  // Link this to a new UI Image that represents the random attack's cooldown
-    public Image blueLaserCooldownImage;  // Link this to a new UI Image that represents the blue laser attack's cooldown
-    public Image cooldownImage;  // This should be linked to your UI Image in the inspector
-    public Image zigZagCooldownImage;  // Link this to a new UI Image that represents the zigzag attack's cooldown
+    public Image randomAttackCooldownImage;  
+    public Image blueLaserCooldownImage;  
+    public Image cooldownImage;  
+    public Image zigZagCooldownImage;  
 
     private void Start()
     {
@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
             float yTop = Camera.main.transform.position.y + screenHeight / 2;
             float yBottom = Camera.main.transform.position.y - screenHeight / 2;
 
-            float spacing = screenWidth / 50; // assuming we want to spawn 50 lasers
+            float spacing = screenWidth / 50; 
 
             for (int i = 0; i < 50; i++)
             {
@@ -148,7 +148,6 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        // Update the UI to represent the cooldowns
         float cooldownProgress = (Time.time - timeSinceLastSpecialAttack) / specialAttackDelay;
         cooldownImage.fillAmount = cooldownProgress;
 

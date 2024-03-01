@@ -15,7 +15,6 @@ public class EnemyLaserController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
-            // Add logic to decrease player health
         }
     }
 }

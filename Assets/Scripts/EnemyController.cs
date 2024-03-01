@@ -3,12 +3,12 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public int startingHealth = 1;
-    //public GameObject explosionPrefab;
+
     public GameObject laserPrefab;
     public float shootingInterval = 3f;
     public float speed = 2f;
     public AudioClip hitSoundClip;
-    private AudioSource laserShotAudioSourceEnemy;  // AudioSource for the laser shot sound effect
+    private AudioSource laserShotAudioSourceEnemy; 
 
     private int currentHealth;
     private float timeSinceLastShot;
@@ -16,12 +16,12 @@ public class EnemyController : MonoBehaviour
     private bool movingUp = true;
     private float enemyHeight;
 
-    public GameObject explosionParticlePrefab; // Drag your explosion particle prefab here in the inspector
+    public GameObject explosionParticlePrefab; 
     public GameObject damageImagePrefab;
     private void Start()
     {
         laserShotAudioSourceEnemy = gameObject.AddComponent<AudioSource>();
-        laserShotAudioSourceEnemy.clip = Resources.Load<AudioClip>("Audio/SFXLaser7");  // Assuming the audio clip is at "Resources/Audio/SFXLaser7"
+        laserShotAudioSourceEnemy.clip = Resources.Load<AudioClip>("Audio/SFXLaser7");
 
         currentHealth = startingHealth;
         startY = transform.position.y;
@@ -30,7 +30,7 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        // Shooting logic
+
         if (Time.time > timeSinceLastShot + shootingInterval)
         {
             Shoot();
@@ -42,7 +42,6 @@ public class EnemyController : MonoBehaviour
             timeSinceLastShot = Time.time;
         }
 
-        // Movement logic
         float newY = transform.position.y + (movingUp ? speed : -speed) * Time.deltaTime;
         float clampedY = Mathf.Clamp(newY, -Camera.main.orthographicSize + enemyHeight / 2, Camera.main.orthographicSize - enemyHeight / 2);
         transform.position = new Vector2(transform.position.x, clampedY);
@@ -93,7 +92,6 @@ public class EnemyController : MonoBehaviour
 
     private void Die()
     {
-        //Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
 
     }
@@ -108,10 +106,9 @@ public class EnemyController : MonoBehaviour
 
     private void PlayDieSound()
     {
-        // Create a separate GameObject for audio playback
         GameObject audioObject = new GameObject("EnemyAudioObject");
         AudioSource audioSource = audioObject.AddComponent<AudioSource>();
-        audioSource.clip = Resources.Load<AudioClip>("Audio/SFXExplo1");  // Assuming the audio clip is at "Resources/Audio/SFXExplo1"
+        audioSource.clip = Resources.Load<AudioClip>("Audio/SFXExplo1");
         audioSource.Play();
 
         // Destroy the audio object after the sound has finished playing

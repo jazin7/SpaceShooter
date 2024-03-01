@@ -9,7 +9,6 @@ public class ZigZagLaserController : MonoBehaviour
     {
         transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
 
-        // Destroy the laser when it leaves the screen
         if (transform.position.x > maxX)
         {
             Destroy(gameObject);

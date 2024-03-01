@@ -5,8 +5,8 @@ public class RandomAttackLaserController : MonoBehaviour
     private float speed = 10f;
     private Vector2 direction;
 
-    private float minX = -10f; // Define the minimum x boundary
-    private float maxX = 10f; // Define the maximum x boundary
+    private float minX = -10f; 
+    private float maxX = 10f; 
 
     public void SetDirection(float angle)
     {
@@ -17,7 +17,6 @@ public class RandomAttackLaserController : MonoBehaviour
     {
         transform.position += (Vector3)(direction * speed * Time.deltaTime);
 
-        // Destroy the laser when it leaves the screen
         if (transform.position.x > maxX || transform.position.x < minX)
         {
             Destroy(gameObject);

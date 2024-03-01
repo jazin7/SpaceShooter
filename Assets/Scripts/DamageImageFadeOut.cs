@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class DamageImageFadeOut : MonoBehaviour
 {
-    private float fadeDuration = 1f; // Duration of the fade
-    private SpriteRenderer spriteRenderer; // The SpriteRenderer component of the image
+    private float fadeDuration = 1f;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
@@ -17,17 +17,15 @@ public class DamageImageFadeOut : MonoBehaviour
     {
         for (float t = 0f; t < fadeDuration; t += Time.deltaTime)
         {
-            // Change the alpha (transparency) over time
+            // Change the alpha over time
             float normalizedTime = t / fadeDuration;
             spriteRenderer.color = new Color(1f, 1f, 1f, 1f - normalizedTime);
 
             yield return null;
         }
 
-        // Ensure the alpha is set to 0 (completely transparent) at the end of the fade
         spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
 
-        // Destroy the game object
         Destroy(gameObject);
     }
 }

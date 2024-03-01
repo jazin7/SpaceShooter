@@ -4,7 +4,7 @@ using TMPro;
 
 public class MainMenuController : MonoBehaviour
 {
-    public TextMeshProUGUI highScoreText; // Add this line here
+    public TextMeshProUGUI highScoreText;
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class MainMenuController : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            SceneManager.LoadScene("SampleScene"); // replace "GameScene" with the name of your game scene
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }

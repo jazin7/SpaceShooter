@@ -4,15 +4,15 @@ using System.Collections;
 
 public class PlayerHitHandler : MonoBehaviour
 {
-    public float delayBeforeReturnToMenu = 1f;  // Delay in seconds before returning to the menu
-    private AudioSource bgmAudioSource;  // Background Music
-    public AudioSource explosionAudioSource;  // Explosion sound
+    public float delayBeforeReturnToMenu = 1f; 
+    private AudioSource bgmAudioSource; 
+    public AudioSource explosionAudioSource;  
     private bool isHit = false;
     private float hitTime;
-    public float fadeDuration = 1.0f;  // Duration of the fade-out in seconds
+    public float fadeDuration = 1.0f;  
 
 
-    public GameObject explosionParticlePrefab; // Drag your explosion particle prefab here in the inspector
+    public GameObject explosionParticlePrefab; 
 
 
     private void Start()
@@ -29,15 +29,12 @@ public class PlayerHitHandler : MonoBehaviour
             explosionAudioSource.PlayOneShot(explosionAudioSource.clip);
             hitTime = Time.time;
             Destroy(collision.gameObject);
-            // Instantiate explosion particle system at player's position
             Instantiate(explosionParticlePrefab, transform.position, Quaternion.identity);
 
-            // Start the fade-out for background music
             StartCoroutine(FadeOut(bgmAudioSource, fadeDuration));
         }
     }
 
-    // Coroutine to fade out an audio source over a certain duration
     private IEnumerator FadeOut(AudioSource audioSource, float duration)
     {
         float startVolume = audioSource.volume;
@@ -56,7 +53,7 @@ public class PlayerHitHandler : MonoBehaviour
     {
         if (isHit && Time.time >= hitTime + delayBeforeReturnToMenu)
         {
-            SceneManager.LoadScene("MainMenu");  // Replace "MainMenu" with the name of your main menu scene
+            SceneManager.LoadScene("MainMenu"); 
         }
     }
 }
